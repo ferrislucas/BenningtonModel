@@ -19,6 +19,18 @@ namespace InputModelAggregateRoot
 		{
 		}
 
+        public Guid InputModelId 
+        {
+            get
+            {
+                return this.Id;
+            }
+            set
+            {
+                Id = value;
+            }
+        }
+
         protected void OnInputModelAggregateRootCreated(InputModelAggregateRootCreatedEvent inputModelAggregateRootCreatedEvent)
         {
             Id = inputModelAggregateRootCreatedEvent.AggregateRootId;

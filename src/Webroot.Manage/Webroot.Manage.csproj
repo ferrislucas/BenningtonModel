@@ -275,6 +275,12 @@
   <ItemGroup>
     <Content Include="Target_\Active\ConnectionStrings.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InputModelAggregateRoot\InputModelAggregateRoot.csproj">
+      <Project>{882803D2-984F-4771-AB3A-9C6BDEB15CFB}</Project>
+      <Name>InputModelAggregateRoot</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

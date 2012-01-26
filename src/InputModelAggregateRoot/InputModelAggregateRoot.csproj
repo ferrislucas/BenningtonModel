@@ -45,7 +45,8 @@
   <ItemGroup>
     <Compile Include="InputModelAggregateRoot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SubmitInputModelCommand.cs" />
+    <Compile Include="CreateInputModelCommand.cs" />
+    <Compile Include="UpdateInputModelCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
