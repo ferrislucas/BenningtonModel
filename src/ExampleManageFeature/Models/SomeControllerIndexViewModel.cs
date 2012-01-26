@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Bennington.Cms.Metadata;
+﻿using Bennington.Cms.Metadata;
 using Bennington.Core.List;
 using FluentValidation;
 
-namespace SampleCmsWebsite.Models
+namespace ExampleManageFeature.Models
 {
     public class SomeControllerIndexViewModel
     {
