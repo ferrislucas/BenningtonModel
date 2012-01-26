@@ -6,18 +6,18 @@ using SimpleCqrs.Commanding;
 
 namespace InputModelAggregateRoot
 {
-    public class UpdateInputModelCommandHandler<T> : AggregateRootCommandHandler<UpdateInputModelCommand<T>, InputModelAggregateRoot<T>>
+    public class UpdateInputModelCommandHandler : AggregateRootCommandHandler<UpdateInputModelCommand, InputModelAggregateRoot>
     {
-        public override void Handle(UpdateInputModelCommand<T> command, InputModelAggregateRoot<T> aggregateRoot)
+        public override void Handle(UpdateInputModelCommand command, InputModelAggregateRoot aggregateRoot)
         {
             aggregateRoot.InputModelId = command.AggregateRootId;
             aggregateRoot.SubmitInputModel(command.InputModel, command.SecurityInformation);
         }
     }
 
-    public class UpdateInputModelCommand<T> : CommandWithAggregateRootId
+    public class UpdateInputModelCommand : CommandWithAggregateRootId
     {
-        public T InputModel { get; set; }
+        public object InputModel { get; set; }
 
         public string SecurityInformation { get; set; }
     }

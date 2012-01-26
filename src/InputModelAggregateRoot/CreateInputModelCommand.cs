@@ -7,14 +7,14 @@ using SimpleCqrs.Domain;
 
 namespace InputModelAggregateRoot
 {
-    public class CreateInputModelCommand<T> : CommandWithAggregateRootId
+    public class CreateInputModelCommand : CommandWithAggregateRootId
     {
-        public T InputModel { get; set; }
+        public object InputModel { get; set; }
 
         public string SecurityInformation { get; set; }
     }
 
-    public class CreateInputModelCommandHandler<T> : CommandHandler<CreateInputModelCommand<T>>
+    public class CreateInputModelCommandHandler : CommandHandler<CreateInputModelCommand>
     {
         private readonly IDomainRepository domainRepository;
 
@@ -23,9 +23,9 @@ namespace InputModelAggregateRoot
             this.domainRepository = domainRepository;
         }
 
-        public override void Handle(CreateInputModelCommand<T> command)
+        public override void Handle(CreateInputModelCommand command)
         {
-            var inputModelAggregateRoot = new InputModelAggregateRoot<T>(command.AggregateRootId);
+            var inputModelAggregateRoot = new InputModelAggregateRoot(command.AggregateRootId);
             inputModelAggregateRoot.SubmitInputModel(command.InputModel, command.SecurityInformation);
             domainRepository.Save(inputModelAggregateRoot);
         }

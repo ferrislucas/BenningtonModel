@@ -7,7 +7,7 @@ using SimpleCqrs.Eventing;
 
 namespace InputModelAggregateRoot
 {
-    public class InputModelAggregateRoot<T> : AggregateRoot
+    public class InputModelAggregateRoot : AggregateRoot
     {
         public InputModelAggregateRoot(Guid aggregateRootId)
 		{
@@ -36,9 +36,9 @@ namespace InputModelAggregateRoot
             Id = inputModelAggregateRootCreatedEvent.AggregateRootId;
         }
 
-        public void SubmitInputModel(T inputModel, string securityInformation)
+        public void SubmitInputModel(object inputModel, string securityInformation)
         {
-            Apply(new InputModelSubmittedEvent<T>()
+            Apply(new InputModelSubmittedEvent()
                       {
                           InputModelType = inputModel.GetType(),
                           SecurityInformation = securityInformation,
@@ -48,9 +48,9 @@ namespace InputModelAggregateRoot
 
     }
 
-    public class InputModelSubmittedEvent<T> : DomainEvent
+    public class InputModelSubmittedEvent : DomainEvent
     {
-        public T InputModel { get; set; }
+        public object InputModel { get; set; }
 
         public Type InputModelType { get; set; }
 

@@ -31,8 +31,7 @@ namespace SampleCmsWebsite
                                     Assembly.GetAssembly(typeof (ContentNodeProviderDraftDenormalizer)),
                                     Assembly.GetAssembly(typeof(SectionNodeProviderDraftDenormalizer)),
 
-                                    Assembly.GetAssembly(typeof(SomeController)),
-                                    Assembly.GetAssembly(typeof(CreateInputModelCommand<>)),
+                                    Assembly.GetAssembly(typeof(CreateInputModelCommand)),
                                 };
 
             assemblies.AddRange((base.GetAssembliesToScan(simpleCqrsServiceLocator)));

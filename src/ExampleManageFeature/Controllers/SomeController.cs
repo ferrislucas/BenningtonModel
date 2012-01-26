@@ -24,21 +24,29 @@ namespace ExampleManageFeature.Controllers
             return GetAllSomeForms().AsQueryable();
         }
 
-        public override ActionResult Create(SomeForm form)
+        protected override SomeForm CreateForm()
         {
-            commandBus.Send(new CreateInputModelCommand<SomeForm>()
-                                {
-                                    AggregateRootId = Guid.NewGuid(),
-                                    InputModel = form,
-                                    SecurityInformation = HttpContext.User.Identity.Name
-                                });
+            return new SomeForm()
+                       {
+                           Id = Guid.NewGuid().ToString(),
+                       };
+        }
 
-            return base.Create(form);
+        public override void InsertForm(SomeForm form)
+        {
+            commandBus.Send(new CreateInputModelCommand()
+                                    {
+                                        AggregateRootId = Guid.NewGuid(),
+                                        InputModel = form,
+                                        SecurityInformation = HttpContext.User.Identity.Name
+                                    });
+
+            base.InsertForm(form);
         }
 
         public override void UpdateForm(SomeForm form)
         {
-            commandBus.Send(new UpdateInputModelCommand<SomeForm>()
+            commandBus.Send(new UpdateInputModelCommand()
                                 {
                                     AggregateRootId = new Guid(form.Id),
                                     InputModel = form,
