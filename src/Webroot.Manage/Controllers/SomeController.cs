@@ -8,6 +8,7 @@ using SampleCmsWebsite.Models;
 
 namespace SampleCmsWebsite.Controllers
 {
+    [ValidateInput(false)]
     public class SomeController : ListManageController<SomeForm, SomeForm>
     {
         protected override IQueryable<SomeForm> GetListItems(Bennington.Core.List.ListViewModel listViewModel)

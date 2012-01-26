@@ -127,10 +127,25 @@
     <Reference Include="MvcTurbine.Web">
       <HintPath>..\packages\MVCTurbine.3.4\lib\MvcTurbine.Web.dll</HintPath>
     </Reference>
+    <Reference Include="PagedList">
+      <HintPath>..\..\lib\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\..\lib\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="ServiceStack.Text">
       <HintPath>..\packages\ServiceStack.Text.3.3.4\lib\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="Simple.Data">
+      <HintPath>..\packages\Simple.Data.Core.0.12.2.2\lib\net40\Simple.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Simple.Data.Ado">
+      <HintPath>..\packages\Simple.Data.Ado.0.12.2.2\lib\net40\Simple.Data.Ado.dll</HintPath>
+    </Reference>
+    <Reference Include="Simple.Data.SqlServer">
+      <HintPath>..\packages\Simple.Data.SqlServer.0.12.2.2\lib\net40\Simple.Data.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="SimpleCqrs">
       <HintPath>..\packages\SimpleCqrs.1.0\lib\SimpleCqrs.dll</HintPath>
@@ -273,7 +288,7 @@
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
+          <AutoAssignPort>False</AutoAssignPort>
           <DevelopmentServerPort>54841</DevelopmentServerPort>
           <DevelopmentServerVPath>/Manage</DevelopmentServerVPath>
           <IISUrl>http://localhost:54841/</IISUrl>
