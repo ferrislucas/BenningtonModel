@@ -13,14 +13,14 @@ namespace SampleCmsWebsite
 {
     public class SimpleCqrsRuntime : SimpleCqrsRuntime<SimpleCqrs.Unity.UnityServiceLocator>
     {
-        private UnityContainer serviceLocator;
+        private readonly UnityContainer serviceLocator;
 
         public SimpleCqrsRuntime(UnityContainer serviceLocator)
         {
             this.serviceLocator = serviceLocator;
         }
 
-        protected override IEnumerable<Assembly> GetAssembliesToScan(SimpleCqrs.IServiceLocator serviceLocator)
+        protected override IEnumerable<Assembly> GetAssembliesToScan(IServiceLocator simpleCqrsServiceLocator)
         {
             var assemblies = new List<Assembly>
                                 {
@@ -30,14 +30,9 @@ namespace SampleCmsWebsite
                                     Assembly.GetAssembly(typeof(SectionNodeProviderDraftDenormalizer)),
                                 };
 
-            assemblies.AddRange((base.GetAssembliesToScan(serviceLocator)));
+            assemblies.AddRange((base.GetAssembliesToScan(simpleCqrsServiceLocator)));
 
             return assemblies;
-        }
-
-        protected UnityServiceLocator GetServiceLocator()
-        {
-            return new UnityServiceLocator(serviceLocator);
         }
     }
 }
