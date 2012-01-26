@@ -52,14 +52,15 @@
     <Reference Include="Bennington.Content.Sql">
       <HintPath>..\..\lib\Bennington\Bennington.Content.Sql.dll</HintPath>
     </Reference>
+    <Reference Include="Bennington.ContentTree, Version=0.3.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Bennington\Bennington.ContentTree.dll</HintPath>
+    </Reference>
     <Reference Include="Bennington.ContentTree.Caching">
       <HintPath>..\..\lib\Bennington\Bennington.ContentTree.Caching.dll</HintPath>
     </Reference>
     <Reference Include="Bennington.ContentTree.Domain">
       <HintPath>..\..\lib\Bennington\Bennington.ContentTree.Domain.dll</HintPath>
-    </Reference>
-    <Reference Include="Bennington.ContentTree.Domain.SimpleCqrsRuntime">
-      <HintPath>..\..\lib\Bennington\Bennington.ContentTree.Domain.SimpleCqrsRuntime.dll</HintPath>
     </Reference>
     <Reference Include="Bennington.ContentTree.Providers.ContentNodeProvider">
       <HintPath>..\..\lib\Bennington\Bennington.ContentTree.Providers.ContentNodeProvider.dll</HintPath>
@@ -192,6 +193,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routing\EmptyDashboardRouting.cs" />
     <Compile Include="Routing\SomeControllerRouting.cs" />
+    <Compile Include="SimpleCqrsRuntime.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
