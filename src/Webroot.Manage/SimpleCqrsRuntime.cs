@@ -6,6 +6,8 @@ using System.Web;
 using Bennington.ContentTree.Denormalizers;
 using Bennington.ContentTree.Providers.ContentNodeProvider.Denormalizers;
 using Bennington.ContentTree.Providers.SectionNodeProvider.Denormalizers;
+using ExampleManageFeature.Controllers;
+using InputModelAggregateRoot;
 using Microsoft.Practices.Unity;
 using SimpleCqrs;
 
@@ -28,6 +30,9 @@ namespace SampleCmsWebsite
                                     Assembly.GetAssembly(typeof (TreeNodeDenormalizer)),
                                     Assembly.GetAssembly(typeof (ContentNodeProviderDraftDenormalizer)),
                                     Assembly.GetAssembly(typeof(SectionNodeProviderDraftDenormalizer)),
+
+                                    Assembly.GetAssembly(typeof(SomeController)),
+                                    Assembly.GetAssembly(typeof(CreateInputModelCommand<>)),
                                 };
 
             assemblies.AddRange((base.GetAssembliesToScan(simpleCqrsServiceLocator)));
