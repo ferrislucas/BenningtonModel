@@ -118,6 +118,9 @@
     <Reference Include="MvcTurbine">
       <HintPath>..\packages\MVCTurbine.3.4\lib\MvcTurbine.dll</HintPath>
     </Reference>
+    <Reference Include="MvcTurbine.FluentValidation">
+      <HintPath>..\..\lib\MvcTurbine.FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="MvcTurbine.MembershipProvider">
       <HintPath>..\..\lib\MvcTurbine.MembershipProvider.3.0\lib\MvcTurbine.MembershipProvider.dll</HintPath>
     </Reference>
