@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webroot.Manage", "Webroot.M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputModelAggregateRoot", "InputModelAggregateRoot\InputModelAggregateRoot.csproj", "{882803D2-984F-4771-AB3A-9C6BDEB15CFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleManageFeature", "ExampleManageFeature\ExampleManageFeature.csproj", "{89CD70A2-5E58-4E90-9B93-C15B45D8A2B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{882803D2-984F-4771-AB3A-9C6BDEB15CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{882803D2-984F-4771-AB3A-9C6BDEB15CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{882803D2-984F-4771-AB3A-9C6BDEB15CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89CD70A2-5E58-4E90-9B93-C15B45D8A2B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89CD70A2-5E58-4E90-9B93-C15B45D8A2B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89CD70A2-5E58-4E90-9B93-C15B45D8A2B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89CD70A2-5E58-4E90-9B93-C15B45D8A2B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

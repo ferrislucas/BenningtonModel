@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Bennington.Cms.Controllers;
 using InputModelAggregateRoot;
 using SampleCmsWebsite.Models;
 using SimpleCqrs.Commanding;
 
-namespace SampleCmsWebsite.Controllers
+namespace ExampleManageFeature.Controllers
 {
     [ValidateInput(false)]
     public class SomeController : ListManageController<SomeForm, SomeForm>
