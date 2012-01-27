@@ -39,7 +39,7 @@ namespace ExampleFeatureManagement.Repositories
         public Models.ExampleFeatureInputModel GetById(string id)
         {
             var db = DatabaseFactory.GetMongoDatabase();
-            return (Models.ExampleFeatureInputModel) db.ExampleFeatures.FindByMemorialId(id);
+            return (Models.ExampleFeatureInputModel) db.ExampleFeatures.FindById(id);
         }
 
         public IEnumerable<Models.ExampleFeatureInputModel> GetPage(int pageIndex, int itemsPerPage)
