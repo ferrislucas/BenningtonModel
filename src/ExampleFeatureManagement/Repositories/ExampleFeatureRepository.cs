@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Web.Helpers;
 using Shared;
+using Simple.Data;
 
 namespace ExampleFeatureManagement.Repositories
 {
@@ -12,7 +14,7 @@ namespace ExampleFeatureManagement.Repositories
         void Update(Models.ExampleFeatureInputModel exampleFeatureInputModel);
         IQueryable<Models.ExampleFeatureInputModel> GetAll();
         Models.ExampleFeatureInputModel GetById(string id);
-        IEnumerable<Models.ExampleFeatureInputModel> GetPage(int pageIndex, int itemsPerPage);
+        IEnumerable<Models.ExampleFeatureInputModel> GetPage(Bennington.Core.List.ListViewModel listViewModel);
         void Delete(string id);
     }
 
@@ -43,14 +45,24 @@ namespace ExampleFeatureManagement.Repositories
             return (Models.ExampleFeatureInputModel) db.ExampleFeatures.FindById(id);
         }
 
-        public IEnumerable<Models.ExampleFeatureInputModel> GetPage(int pageIndex, int itemsPerPage)
+        public IEnumerable<Models.ExampleFeatureInputModel> GetPage(Bennington.Core.List.ListViewModel listViewModel)
         {
             var db = DatabaseFactory.GetMongoDatabase();
+            if (listViewModel.SortBy == null)
+                return db.ExampleFeatures
+                    .All()
+                    .Skip(listViewModel.PageIndex * listViewModel.PageSize)
+                    .Take(listViewModel.PageSize)
+                    .Cast<Models.ExampleFeatureInputModel>();
+
+            var orderByDirection = listViewModel.SortDirection == SortDirection.Descending ? OrderByDirection.Descending : OrderByDirection.Ascending;
+
             var pagedSet = db.ExampleFeatures
                                 .All()
-                                .Skip(pageIndex * itemsPerPage)
-                                .Take(itemsPerPage)
-                                .Cast<Models.ExampleFeatureInputModel>();
+                                .OrderBy(db.ExampleFeatures[listViewModel.SortBy], orderByDirection)
+                                .Skip(listViewModel.PageIndex*listViewModel.PageSize)
+                                .Take(listViewModel.PageSize)
+                                .Cast<Models.ExampleFeatureInputModel>();            
             return pagedSet;
         }
 

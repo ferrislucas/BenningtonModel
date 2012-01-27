@@ -28,7 +28,7 @@ namespace ExampleFeatureManagement.Controllers
         protected override IQueryable<ExampleFeatureListViewModel> GetListItems(Bennington.Core.List.ListViewModel listViewModel)
         {
             return (
-                    from item in exampleFeatureRepository.GetPage(listViewModel.PageIndex, listViewModel.PageSize)
+                    from item in exampleFeatureRepository.GetPage(listViewModel)
                     select ((ExampleFeatureListViewModel) new ExampleFeatureListViewModel().InjectFrom(item))
                     ).AsQueryable();
         }
