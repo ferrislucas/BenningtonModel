@@ -12,7 +12,7 @@ namespace SampleCmsWebsite.Routing
     {
         public void Register(RouteCollection routes)
         {
-            routes.MapRoute("SomeControllerRouting", "SomeController/{action}", new { controller = "Some", action = "Index" });
+            routes.MapRoute("SomeControllerRouting", "ExampleFeatureManagement/{action}", new { controller = "ExampleFeatureManagement", action = "Index" });
         }
     }
 }

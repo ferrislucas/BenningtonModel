@@ -6,7 +6,7 @@ using System.Web;
 using Bennington.ContentTree.Denormalizers;
 using Bennington.ContentTree.Providers.ContentNodeProvider.Denormalizers;
 using Bennington.ContentTree.Providers.SectionNodeProvider.Denormalizers;
-using ExampleManageFeature.Controllers;
+using ExampleFeatureManagement.Models;
 using InputModelAggregateRoot;
 using Microsoft.Practices.Unity;
 using SimpleCqrs;

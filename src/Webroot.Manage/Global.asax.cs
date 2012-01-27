@@ -3,6 +3,7 @@ using Bennington.Core.Configuration;
 using Microsoft.Practices.Unity;
 using MvcTurbine.ComponentModel;
 using MvcTurbine.Web;
+using Shared;
 using SimpleCqrs.Commanding;
 using SimpleCqrs.Eventing;
 using SimpleCqrs.EventStore.SqlServer;
@@ -15,6 +16,8 @@ namespace SampleCmsWebsite
     {
         static MvcApplication()
         {
+            DatabaseFactory.SetConnectionName("Mongo");
+
             var container = new UnityContainer();
             ServiceLocatorManager.SetLocatorProvider(() => new UnityServiceLocator(container));
 
