@@ -87,6 +87,7 @@
     <Compile Include="Registration\RegisterInterfaceToSingleImplementations.cs" />
     <Compile Include="Registration\RegisterSimpleCqrsDependencies.cs" />
     <Compile Include="Repositories\ExampleFeatureRepository.cs" />
+    <Compile Include="Routing\Routing.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InputModelAggregateRoot\InputModelAggregateRoot.csproj">

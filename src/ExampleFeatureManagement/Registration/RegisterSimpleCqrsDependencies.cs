@@ -11,16 +11,16 @@ namespace ExampleFeatureManagement.Registration
 {
     public class RegisterSimpleCqrsDependencies : Blade
     {
-        private readonly IServiceLocator serviceLocator;
+        private readonly IServiceLocator simpleCqrsServiceLocator;
 
-        public RegisterSimpleCqrsDependencies(SimpleCqrs.IServiceLocator serviceLocator)
+        public RegisterSimpleCqrsDependencies(SimpleCqrs.IServiceLocator simpleCqrsServiceLocator)
         {
-            this.serviceLocator = serviceLocator;
+            this.simpleCqrsServiceLocator = simpleCqrsServiceLocator;
         }
 
         public override void Spin(IRotorContext context)
         {
-            serviceLocator.Register(context.ServiceLocator.Resolve<IExampleFeatureRepository>());
+            simpleCqrsServiceLocator.Register(context.ServiceLocator.Resolve<IExampleFeatureRepository>());
         }
     }
 }

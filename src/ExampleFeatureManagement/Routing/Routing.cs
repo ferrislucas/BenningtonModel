@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using ExampleFeatureManagement.Controllers;
 using MvcTurbine.Routing;
 
 namespace SampleCmsWebsite.Routing
@@ -12,7 +13,7 @@ namespace SampleCmsWebsite.Routing
     {
         public void Register(RouteCollection routes)
         {
-            routes.MapRoute("SomeControllerRouting", "ExampleFeatureManagement/{action}", new { controller = "ExampleFeatureManagement", action = "Index" });
+            routes.MapRoute(typeof(ExampleFeatureManagementController).Name, typeof(ExampleFeatureManagementController).Name.Replace("Controller", string.Empty) + "/{action}", new { controller = typeof(ExampleFeatureManagementController).Name.Replace("Controller", string.Empty), action = "Index" });
         }
     }
 }

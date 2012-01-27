@@ -192,7 +192,6 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routing\EmptyDashboardRouting.cs" />
-    <Compile Include="Routing\SomeControllerRouting.cs" />
     <Compile Include="SimpleCqrsRuntime.cs" />
   </ItemGroup>
   <ItemGroup>
