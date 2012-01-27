@@ -25,7 +25,7 @@ namespace ExampleFeatureManagement.Denormalizers
             var item = exampleFeatureRepository.GetById(domainEvent.AggregateRootId.ToString());
             if (item != null)
             {
-                exampleFeatureRepository.Update(item);   
+                exampleFeatureRepository.Update((ExampleFeatureInputModel) domainEvent.InputModel);   
             }
             else
             {

@@ -53,7 +53,7 @@ namespace ExampleFeatureManagement.Controllers
             form.LastModifyDate = form.CreateDate;
             commandBus.Send(new CreateInputModelCommand()
                                     {
-                                        AggregateRootId = Guid.NewGuid(),
+                                        AggregateRootId = new Guid(form.Id),
                                         InputModel = form,
                                         SecurityInformation = HttpContext.User.Identity.Name
                                     });
