@@ -151,6 +151,10 @@
     <Reference Include="Simple.Data.SqlServer">
       <HintPath>..\packages\Simple.Data.SqlServer.0.12.2.2\lib\net40\Simple.Data.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="SimpleCqrs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SimpleCqrs.1.0\lib\SimpleCqrs.dll</HintPath>
+    </Reference>
     <Reference Include="SimpleCqrs.EventStore.SqlServer">
       <HintPath>..\packages\SimpleCqrs.EventStore.SqlServer.1.0\lib\SimpleCqrs.EventStore.SqlServer.dll</HintPath>
     </Reference>
@@ -270,10 +274,6 @@
     <Content Include="Target_\Active\ConnectionStrings.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SimpleCQRS\src\SimpleCqrs\SimpleCqrs.csproj">
-      <Project>{E04C12B5-A6D3-4D64-9F38-896BEE68162E}</Project>
-      <Name>SimpleCqrs</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ExampleFeatureManagement\ExampleFeatureManagement.csproj">
       <Project>{89CD70A2-5E58-4E90-9B93-C15B45D8A2B5}</Project>
       <Name>ExampleFeatureManagement</Name>

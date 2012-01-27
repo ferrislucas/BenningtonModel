@@ -43,10 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\DeleteInputModelCommand.cs" />
     <Compile Include="InputModelAggregateRoot.cs" />
+    <Compile Include="Events\InputModelAggregateRootCreatedEvent.cs" />
+    <Compile Include="Events\InputModelSubmittedEvent.cs" />
+    <Compile Include="Events\DeleteInputModelRootEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CreateInputModelCommand.cs" />
-    <Compile Include="UpdateInputModelCommand.cs" />
+    <Compile Include="Commands\CreateInputModelCommand.cs" />
+    <Compile Include="Commands\UpdateInputModelCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

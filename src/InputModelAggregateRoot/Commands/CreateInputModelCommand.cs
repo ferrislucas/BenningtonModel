@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using SimpleCqrs.Commanding;
+﻿using SimpleCqrs.Commanding;
 using SimpleCqrs.Domain;
 
-namespace InputModelAggregateRoot
+namespace InputModelAggregateRoot.Commands
 {
     public class CreateInputModelCommand : CommandWithAggregateRootId
     {

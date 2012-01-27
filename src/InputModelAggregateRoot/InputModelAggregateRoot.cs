@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using InputModelAggregateRoot.Commands;
+using InputModelAggregateRoot.Events;
 using SimpleCqrs.Domain;
-using SimpleCqrs.Eventing;
 
 namespace InputModelAggregateRoot
 {
@@ -46,18 +47,14 @@ namespace InputModelAggregateRoot
                       });
         }
 
-    }
-
-    public class InputModelSubmittedEvent : DomainEvent
-    {
-        public object InputModel { get; set; }
-
-        public Type InputModelType { get; set; }
-
-        public string SecurityInformation { get; set; }
-    }
-
-    public class InputModelAggregateRootCreatedEvent : DomainEvent
-    {
+        public void Delete(Guid aggregateRootId, string lastModifyBy, Type inputModelType)
+        {
+            Apply(new DeleteInputModelEvent()
+                      {
+                          AggregateRootId = aggregateRootId,
+                          LastModifyBy = lastModifyBy,
+                          InputModelType = inputModelType
+                      });
+        }
     }
 }

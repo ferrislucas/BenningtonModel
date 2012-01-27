@@ -6,6 +6,7 @@ using Bennington.Cms.Controllers;
 using ExampleFeatureManagement.Models;
 using ExampleFeatureManagement.Repositories;
 using InputModelAggregateRoot;
+using InputModelAggregateRoot.Commands;
 using Omu.ValueInjecter;
 using SimpleCqrs.Commanding;
 
@@ -73,6 +74,29 @@ namespace ExampleFeatureManagement.Controllers
                                 });
 
             base.UpdateForm(form);
+        }
+
+        public override ActionResult Delete(object id)
+        {
+            commandBus.Send(new DeleteInputModelCommand()
+                                {
+                                    AggregateRootId = (Guid) GetIdForDelete(id),
+                                    InputModelType = typeof(ExampleFeatureInputModel),
+                                    SecurityInformation = HttpContext.User.Identity.Name,
+                                });
+            return base.Delete(id);
+        }
+
+        private static Guid? GetIdForDelete(object id)
+        {
+            var idToUse = id as string;
+            if (idToUse == null)
+            {
+                var idArray = id as string[];
+                if (idArray == null) return null;
+                idToUse = idArray.FirstOrDefault();
+            }
+            return new Guid(idToUse);
         }
     }
 }

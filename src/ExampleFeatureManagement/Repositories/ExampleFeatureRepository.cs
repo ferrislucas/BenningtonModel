@@ -13,6 +13,7 @@ namespace ExampleFeatureManagement.Repositories
         IQueryable<Models.ExampleFeatureInputModel> GetAll();
         Models.ExampleFeatureInputModel GetById(string id);
         IEnumerable<Models.ExampleFeatureInputModel> GetPage(int pageIndex, int itemsPerPage);
+        void Delete(string id);
     }
 
     public class ExampleFeatureRepository : IExampleFeatureRepository
@@ -47,6 +48,12 @@ namespace ExampleFeatureManagement.Repositories
             var db = DatabaseFactory.GetMongoDatabase();
             var pagedSet = db.ExampleFeatures.All().Cast<Models.ExampleFeatureInputModel>();  //.Skip(pageIndex * itemsPerPage).Take(itemsPerPage).Cast<Models.ExampleFeatureInputModel>();
             return pagedSet;
+        }
+
+        public void Delete(string id)
+        {
+            var db = DatabaseFactory.GetMongoDatabase();
+            db.ExampleFeatures.DeleteById(id);
         }
     }
 }
