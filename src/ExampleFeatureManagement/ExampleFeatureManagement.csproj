@@ -79,7 +79,7 @@
   <ItemGroup>
     <Compile Include="Controllers\ExampleFeatureManagementController.cs" />
     <Compile Include="Denormalizers\ExampleFeatureInputModelDenormalizer.cs" />
-    <Compile Include="MenuSystemConfigurer.cs" />
+    <Compile Include="ExampleFeatureManagementMenuSystemConfigurer.cs" />
     <Compile Include="Models\ExampleFeatureIndexViewModel.cs" />
     <Compile Include="Models\ExampleFeatureInputModel.cs" />
     <Compile Include="Models\ExampleFeatureListViewModel.cs" />
