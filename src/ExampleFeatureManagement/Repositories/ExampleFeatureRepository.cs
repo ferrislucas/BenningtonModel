@@ -46,7 +46,11 @@ namespace ExampleFeatureManagement.Repositories
         public IEnumerable<Models.ExampleFeatureInputModel> GetPage(int pageIndex, int itemsPerPage)
         {
             var db = DatabaseFactory.GetMongoDatabase();
-            var pagedSet = db.ExampleFeatures.All().Cast<Models.ExampleFeatureInputModel>();  //.Skip(pageIndex * itemsPerPage).Take(itemsPerPage).Cast<Models.ExampleFeatureInputModel>();
+            var pagedSet = db.ExampleFeatures
+                                .All()
+                                .Skip(pageIndex * itemsPerPage)
+                                .Take(itemsPerPage)
+                                .Cast<Models.ExampleFeatureInputModel>();
             return pagedSet;
         }
 
