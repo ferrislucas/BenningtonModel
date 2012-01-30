@@ -42,7 +42,7 @@ namespace ExampleFeatureManagement.Repositories
         public Models.ExampleFeatureInputModel GetById(string id)
         {
             var db = DatabaseFactory.GetMongoDatabase();
-            return (Models.ExampleFeatureInputModel) db.ExampleFeatures.FindById(id);
+            return (Models.ExampleFeatureInputModel)db.ExampleFeatures.FindById(id);
         }
 
         public IEnumerable<Models.ExampleFeatureInputModel> GetPage(Bennington.Core.List.ListViewModel listViewModel)
@@ -60,9 +60,9 @@ namespace ExampleFeatureManagement.Repositories
             var pagedSet = db.ExampleFeatures
                                 .All()
                                 .OrderBy(db.ExampleFeatures[listViewModel.SortBy], orderByDirection)
-                                .Skip(listViewModel.PageIndex*listViewModel.PageSize)
+                                .Skip(listViewModel.PageIndex * listViewModel.PageSize)
                                 .Take(listViewModel.PageSize)
-                                .Cast<Models.ExampleFeatureInputModel>();            
+                                .Cast<Models.ExampleFeatureInputModel>();
             return pagedSet;
         }
 

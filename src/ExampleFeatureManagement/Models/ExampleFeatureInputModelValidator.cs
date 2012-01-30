@@ -2,11 +2,6 @@
 
 namespace ExampleFeatureManagement.Models
 {
-    public class ExampleFeatureIndexViewModel
-    {
-        public ExampleFeatureInputModel ExampleFeatureInputModel { get; set; }
-    }
-
     public class ExampleFeatureInputModelValidator : AbstractValidator<ExampleFeatureInputModel>
     {
         public ExampleFeatureInputModelValidator()

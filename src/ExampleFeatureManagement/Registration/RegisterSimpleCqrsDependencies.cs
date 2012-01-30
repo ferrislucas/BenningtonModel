@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ExampleFeatureManagement.Controllers;
 using ExampleFeatureManagement.Repositories;
 using MvcTurbine;
 using MvcTurbine.Blades;
@@ -20,7 +21,8 @@ namespace ExampleFeatureManagement.Registration
 
         public override void Spin(IRotorContext context)
         {
-            simpleCqrsServiceLocator.Register(context.ServiceLocator.Resolve<IExampleFeatureRepository>());
+            simpleCqrsServiceLocator.Register(context.ServiceLocator.Resolve<ExampleFeaturesRepository>());
+            simpleCqrsServiceLocator.Register(context.ServiceLocator.Resolve<ExampleFeaturesDenormalizer>());
         }
     }
 }

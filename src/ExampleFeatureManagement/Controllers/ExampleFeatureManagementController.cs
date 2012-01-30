@@ -3,100 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using Bennington.Cms.Controllers;
+using ExampleFeatureManagement.Denormalizers;
 using ExampleFeatureManagement.Models;
 using ExampleFeatureManagement.Repositories;
 using InputModelAggregateRoot;
 using InputModelAggregateRoot.Commands;
+using InputModelAggregateRoot.Events;
+using MvcTurbine.ComponentModel;
 using Omu.ValueInjecter;
 using SimpleCqrs.Commanding;
+using SimpleCqrs.Eventing;
 
 namespace ExampleFeatureManagement.Controllers
 {
-    [ValidateInput(false)]
-    public class ExampleFeatureManagementController : ListManageController<ExampleFeatureListViewModel, ExampleFeatureInputModel>
+    public class ExampleFeatureManagementController : InputModelAggregateRootManagementControllerBase<ExampleFeatureListViewModel, ExampleFeatureInputModel>
     {
-        private readonly ICommandBus commandBus;
-        private readonly IExampleFeatureRepository exampleFeatureRepository;
-
-        public ExampleFeatureManagementController(ICommandBus commandBus, 
-                                                  IExampleFeatureRepository exampleFeatureRepository)
+        public ExampleFeatureManagementController(ICommandBus commandBus, IRepository<ExampleFeatureInputModel> repository) : base(commandBus, repository)
         {
-            this.exampleFeatureRepository = exampleFeatureRepository;
-            this.commandBus = commandBus;
         }
+    }
 
-        protected override IQueryable<ExampleFeatureListViewModel> GetListItems(Bennington.Core.List.ListViewModel listViewModel)
+    public class ExampleFeaturesRepository : MongoRepository<ExampleFeatureInputModel>
+    {
+    }
+
+    public class ExampleFeaturesDenormalizer : InputModelDenormalizerBase<ExampleFeatureInputModel>,
+                                               IHandleDomainEvents<InputModelSubmittedEvent>,
+                                               IHandleDomainEvents<DeleteInputModelEvent>
+    {
+        public ExampleFeaturesDenormalizer(IRepository<ExampleFeatureInputModel> repository) : base(repository)
         {
-            return (
-                    from item in exampleFeatureRepository.GetPage(listViewModel)
-                    select ((ExampleFeatureListViewModel) new ExampleFeatureListViewModel().InjectFrom(item))
-                    ).AsQueryable();
         }
+    }
 
-        public override ExampleFeatureInputModel GetFormById(object id)
+    public class Registrations : IServiceRegistration
+    {
+        public void Register(IServiceLocator locator)
         {
-            return exampleFeatureRepository.GetById(id.ToString());
-        }
-
-        protected override ExampleFeatureInputModel CreateForm()
-        {
-            return new ExampleFeatureInputModel()
-                       {
-                           Id = Guid.NewGuid().ToString(),
-                       };
-        }
-
-        public override void InsertForm(ExampleFeatureInputModel form)
-        {
-            form.CreateDate = DateTime.Now;
-            form.CreateBy = HttpContext.User.Identity.Name;
-            form.LastModifyBy = form.CreateBy;
-            form.LastModifyDate = form.CreateDate;
-            commandBus.Send(new CreateInputModelCommand()
-                                    {
-                                        AggregateRootId = new Guid(form.Id),
-                                        InputModel = form,
-                                        SecurityInformation = HttpContext.User.Identity.Name
-                                    });
-
-            base.InsertForm(form);
-        }
-
-        public override void UpdateForm(ExampleFeatureInputModel form)
-        {
-            form.LastModifyDate = DateTime.Now;
-            form.LastModifyBy = HttpContext.User.Identity.Name;
-            commandBus.Send(new UpdateInputModelCommand()
-                                {
-                                    AggregateRootId = new Guid(form.Id),
-                                    InputModel = form,
-                                    SecurityInformation = HttpContext.User.Identity.Name
-                                });
-
-            base.UpdateForm(form);
-        }
-
-        public override ActionResult Delete(object id)
-        {
-            commandBus.Send(new DeleteInputModelCommand()
-                                {
-                                    AggregateRootId = (Guid) GetIdForDelete(id),
-                                    InputModelType = typeof(ExampleFeatureInputModel),
-                                    SecurityInformation = HttpContext.User.Identity.Name,
-                                });
-            return base.Delete(id);
-        }
-
-        private static Guid? GetIdForDelete(object id)
-        {
-            var idToUse = id as string;
-            if (idToUse == null)
-            {
-                var idArray = id as string[];
-                if (idArray == null) return null;
-                idToUse = idArray.FirstOrDefault();
-            }
-            return new Guid(idToUse);
+            locator.Register<IRepository<ExampleFeatureInputModel>, ExampleFeaturesRepository>();
         }
     }
 }

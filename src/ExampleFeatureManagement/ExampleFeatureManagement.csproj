@@ -78,15 +78,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ExampleFeatureManagementController.cs" />
-    <Compile Include="Denormalizers\ExampleFeatureInputModelDenormalizer.cs" />
+    <Compile Include="Controllers\InputModelAggregateRootManagementControllerBase.cs" />
+    <Compile Include="Denormalizers\InputModelDenormalizerBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ExampleFeatureManagementMenuSystemConfigurer.cs" />
-    <Compile Include="Models\ExampleFeatureIndexViewModel.cs" />
+    <Compile Include="Models\ExampleFeatureInputModelValidator.cs" />
     <Compile Include="Models\ExampleFeatureInputModel.cs" />
     <Compile Include="Models\ExampleFeatureListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration\RegisterInterfaceToSingleImplementations.cs" />
     <Compile Include="Registration\RegisterSimpleCqrsDependencies.cs" />
-    <Compile Include="Repositories\ExampleFeatureRepository.cs" />
+    <Compile Include="Repositories\MongoRepositoryRepository.cs" />
     <Compile Include="Routing\Routing.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +108,7 @@
     <EmbeddedResource Include="Views\ExampleFeatureManagement\Index.cshtml" />
     <EmbeddedResource Include="Views\ExampleFeatureManagement\EditorTemplates\ExampleFeatureInputModel.cshtml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
