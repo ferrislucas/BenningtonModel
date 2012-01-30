@@ -21,7 +21,7 @@ namespace InputModelAggregateRoot.Commands
 
         public override void Handle(CreateInputModelCommand command)
         {
-            var inputModelAggregateRoot = new InputModelAggregateRoot(command.AggregateRootId);
+            var inputModelAggregateRoot = new AggregateRoots.InputModelAggregateRoot(command.AggregateRootId);
             inputModelAggregateRoot.SubmitInputModel(command.InputModel, command.SecurityInformation);
             domainRepository.Save(inputModelAggregateRoot);
         }

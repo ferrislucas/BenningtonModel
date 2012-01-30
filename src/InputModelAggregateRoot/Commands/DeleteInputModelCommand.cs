@@ -13,9 +13,9 @@ namespace InputModelAggregateRoot.Commands
         public Type InputModelType { get; set; }
     }
 
-    public class DeleteInputModelCommandHandler : AggregateRootCommandHandler<DeleteInputModelCommand, InputModelAggregateRoot>
+    public class DeleteInputModelCommandHandler : AggregateRootCommandHandler<DeleteInputModelCommand, AggregateRoots.InputModelAggregateRoot>
     {
-        public override void Handle(DeleteInputModelCommand command, InputModelAggregateRoot aggregateRoot)
+        public override void Handle(DeleteInputModelCommand command, AggregateRoots.InputModelAggregateRoot aggregateRoot)
         {
             aggregateRoot.Delete(command.AggregateRootId, command.SecurityInformation, command.InputModelType);
         }

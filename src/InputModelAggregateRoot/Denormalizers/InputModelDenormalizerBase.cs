@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using ExampleFeatureManagement.Models;
-using ExampleFeatureManagement.Repositories;
-using InputModelAggregateRoot;
-using InputModelAggregateRoot.Commands;
-using InputModelAggregateRoot.Events;
-using SimpleCqrs.Eventing;
+﻿using InputModelAggregateRoot.Events;
+using InputModelAggregateRoot.Repositories;
 
-namespace ExampleFeatureManagement.Denormalizers
+namespace InputModelAggregateRoot.Denormalizers
 {
     public class InputModelDenormalizerBase<T>
     {

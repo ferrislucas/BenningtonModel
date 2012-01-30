@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using InputModelAggregateRoot.Commands;
 using InputModelAggregateRoot.Events;
 using SimpleCqrs.Domain;
 
-namespace InputModelAggregateRoot
+namespace InputModelAggregateRoot.AggregateRoots
 {
     public class InputModelAggregateRoot : AggregateRoot
     {

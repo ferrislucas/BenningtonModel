@@ -5,7 +5,7 @@ using MvcTurbine.Routing;
 
 namespace ExampleFeatureManagement.Routing
 {
-    public class SomeControllerRouting : IRouteRegistrator
+    public class ExampleFeatureManagementRouting : IRouteRegistrator
     {
         public void Register(RouteCollection routes)
         {

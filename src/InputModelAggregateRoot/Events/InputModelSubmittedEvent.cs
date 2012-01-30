@@ -1,7 +1,7 @@
 ﻿using System;
 using SimpleCqrs.Eventing;
 
-namespace InputModelAggregateRoot
+namespace InputModelAggregateRoot.Events
 {
     public class InputModelSubmittedEvent : DomainEvent
     {

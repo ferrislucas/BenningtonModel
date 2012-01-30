@@ -1,6 +1,7 @@
-﻿using FluentValidation;
+﻿using ExampleFeatureManagement.Models;
+using FluentValidation;
 
-namespace ExampleFeatureManagement.Models
+namespace ExampleFeatureManagement.Validators
 {
     public class ExampleFeatureInputModelValidator : AbstractValidator<ExampleFeatureInputModel>
     {

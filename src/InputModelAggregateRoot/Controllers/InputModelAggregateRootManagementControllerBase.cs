@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Web.Mvc;
 using Bennington.Cms.Controllers;
-using ExampleFeatureManagement.Models;
-using ExampleFeatureManagement.Repositories;
 using InputModelAggregateRoot.Commands;
+using InputModelAggregateRoot.Repositories;
 using Omu.ValueInjecter;
 using SimpleCqrs.Commanding;
 
-namespace ExampleFeatureManagement.Controllers
+namespace InputModelAggregateRoot.Controllers
 {
     [ValidateInput(false)]
     public class InputModelAggregateRootManagementControllerBase<TListViewModel, TInputModel> : ListManageController<TListViewModel, TInputModel>

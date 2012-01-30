@@ -78,19 +78,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ExampleFeatureManagementController.cs" />
-    <Compile Include="Controllers\InputModelAggregateRootManagementControllerBase.cs" />
-    <Compile Include="Denormalizers\InputModelDenormalizerBase.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Denormalizers\ExampleFeaturesDenormalizer.cs" />
+    <Compile Include="Repositories\ExampleFeaturesRepository.cs" />
+    <Compile Include="Registration\RegisterExampleFeaturesRepository.cs" />
     <Compile Include="ExampleFeatureManagementMenuSystemConfigurer.cs" />
-    <Compile Include="Models\ExampleFeatureInputModelValidator.cs" />
+    <Compile Include="Validators\ExampleFeatureInputModelValidator.cs" />
     <Compile Include="Models\ExampleFeatureInputModel.cs" />
     <Compile Include="Models\ExampleFeatureListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration\RegisterInterfaceToSingleImplementations.cs" />
     <Compile Include="Registration\RegisterSimpleCqrsDependencies.cs" />
-    <Compile Include="Repositories\MongoRepositoryRepository.cs" />
-    <Compile Include="Routing\Routing.cs" />
+    <Compile Include="Routing\ExampleFeatureManagement.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InputModelAggregateRoot\InputModelAggregateRoot.csproj">
