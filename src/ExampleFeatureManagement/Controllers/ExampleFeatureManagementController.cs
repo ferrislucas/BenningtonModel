@@ -16,5 +16,10 @@ namespace ExampleFeatureManagement.Controllers
         public ExampleFeatureManagementController(ICommandBus commandBus, IRepository<ExampleFeatureInputModel> repository) : base(commandBus, repository)
         {
         }
+
+        public override ActionResult Create(ExampleFeatureInputModel form)
+        {
+            return base.Create(form);
+        }
     }
 }

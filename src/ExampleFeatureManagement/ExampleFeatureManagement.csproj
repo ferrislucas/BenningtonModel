@@ -34,6 +34,10 @@
     <Reference Include="Bennington.Cms">
       <HintPath>..\..\lib\Bennington\Bennington.Cms.dll</HintPath>
     </Reference>
+    <Reference Include="Bennington.Cms.InputModelAggregateRoot, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Bennington\Bennington.Cms.InputModelAggregateRoot.dll</HintPath>
+    </Reference>
     <Reference Include="Bennington.Core">
       <HintPath>..\..\lib\Bennington\Bennington.Core.dll</HintPath>
     </Reference>
@@ -95,12 +99,6 @@
     <EmbeddedResource Include="Views\ExampleFeatureManagement\CellTemplates\Name.cshtml" />
     <EmbeddedResource Include="Views\ExampleFeatureManagement\Index.cshtml" />
     <EmbeddedResource Include="Views\ExampleFeatureManagement\EditorTemplates\ExampleFeatureInputModel.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Bennington.Cms.InputModelAggregateRoot\Bennington.Cms.InputModelAggregateRoot.csproj">
-      <Project>{882803D2-984F-4771-AB3A-9C6BDEB15CFB}</Project>
-      <Name>Bennington.Cms.InputModelAggregateRoot</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
