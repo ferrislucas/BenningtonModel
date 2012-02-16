@@ -1,7 +1,7 @@
 ﻿using Bennington.Cms.MenuSystem;
-using ExampleFeatureManagement.Controllers;
+using ExampleFeature.Cms.Controllers;
 
-namespace ExampleFeatureManagement
+namespace ExampleFeature.Cms
 {
     public class ExampleFeatureManagementMenuSystemConfigurer : IMenuSystemConfigurer
     {

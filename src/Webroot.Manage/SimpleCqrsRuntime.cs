@@ -7,7 +7,7 @@ using Bennington.Cms.InputModelAggregateRoot.Commands;
 using Bennington.ContentTree.Denormalizers;
 using Bennington.ContentTree.Providers.ContentNodeProvider.Denormalizers;
 using Bennington.ContentTree.Providers.SectionNodeProvider.Denormalizers;
-using ExampleFeatureManagement.Models;
+using ExampleFeature.Cms;
 using Microsoft.Practices.Unity;
 using SimpleCqrs;
 
@@ -32,7 +32,7 @@ namespace SampleCmsWebsite
                                     Assembly.GetAssembly(typeof(SectionNodeProviderDraftDenormalizer)),
 
                                     Assembly.GetAssembly(typeof(CreateInputModelCommand)),
-                                    Assembly.GetAssembly(typeof(ExampleFeatureManagement.ExampleFeatureManagementMenuSystemConfigurer)),
+                                    Assembly.GetAssembly(typeof(ExampleFeatureManagementMenuSystemConfigurer)),
                                 };
 
             assemblies.AddRange((base.GetAssembliesToScan(simpleCqrsServiceLocator)));

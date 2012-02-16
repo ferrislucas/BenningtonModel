@@ -1,10 +1,9 @@
 ﻿using Bennington.Cms.InputModelAggregateRoot.Repositories;
-using ExampleFeatureManagement.Controllers;
-using ExampleFeatureManagement.Models;
-using ExampleFeatureManagement.Repositories;
+using ExampleFeature.Cms.Models;
+using ExampleFeature.Cms.Repositories;
 using MvcTurbine.ComponentModel;
 
-namespace ExampleFeatureManagement.Registration
+namespace ExampleFeature.Cms.Registration
 {
     public class Registrations : IServiceRegistration
     {

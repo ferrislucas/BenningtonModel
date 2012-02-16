@@ -8,8 +8,8 @@
     <ProjectGuid>{89CD70A2-5E58-4E90-9B93-C15B45D8A2B5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExampleFeatureManagement</RootNamespace>
-    <AssemblyName>ExampleFeatureManagement</AssemblyName>
+    <RootNamespace>ExampleFeature.Cms</RootNamespace>
+    <AssemblyName>ExampleFeature.Cms</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -92,7 +92,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration\RegisterInterfaceToSingleImplementations.cs" />
     <Compile Include="Registration\RegisterSimpleCqrsDependencies.cs" />
-    <Compile Include="Routing\ExampleFeatureManagement.cs" />
+    <Compile Include="Routing\ExampleFeatureManagementRouting.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

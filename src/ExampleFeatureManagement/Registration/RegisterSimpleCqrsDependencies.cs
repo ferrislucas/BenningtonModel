@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using ExampleFeatureManagement.Controllers;
-using ExampleFeatureManagement.Denormalizers;
-using ExampleFeatureManagement.Repositories;
+﻿using ExampleFeature.Cms.Denormalizers;
+using ExampleFeature.Cms.Repositories;
 using MvcTurbine;
 using MvcTurbine.Blades;
 using SimpleCqrs;
 
-namespace ExampleFeatureManagement.Registration
+namespace ExampleFeature.Cms.Registration
 {
     public class RegisterSimpleCqrsDependencies : Blade
     {

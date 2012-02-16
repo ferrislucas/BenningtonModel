@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webroot", "Webroot\Webroot.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webroot.Manage", "Webroot.Manage\Webroot.Manage.csproj", "{45E3DF26-F5F8-41D5-83A0-AA97A69148BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleFeatureManagement", "ExampleFeatureManagement\ExampleFeatureManagement.csproj", "{89CD70A2-5E58-4E90-9B93-C15B45D8A2B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleFeature.Cms", "ExampleFeatureManagement\ExampleFeature.Cms.csproj", "{89CD70A2-5E58-4E90-9B93-C15B45D8A2B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

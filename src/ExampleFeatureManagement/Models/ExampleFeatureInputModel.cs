@@ -2,9 +2,8 @@
 using System.ComponentModel;
 using System.Web.Mvc;
 using Bennington.Cms.Metadata;
-using Bennington.Core.List;
 
-namespace ExampleFeatureManagement.Models
+namespace ExampleFeature.Cms.Models
 {
     public class ExampleFeatureInputModel
     {

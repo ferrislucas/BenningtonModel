@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Bennington.Core.Registration;
 
-namespace ExampleFeatureManagement.Registration
+namespace ExampleFeature.Cms.Registration
 {
     public class RegisterInterfaceToSingleImplementations : InterfaceToSingleImplementationRegistrationConvention
     {

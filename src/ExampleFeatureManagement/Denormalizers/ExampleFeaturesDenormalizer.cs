@@ -1,10 +1,10 @@
 ﻿using Bennington.Cms.InputModelAggregateRoot.Denormalizers;
 using Bennington.Cms.InputModelAggregateRoot.Events;
 using Bennington.Cms.InputModelAggregateRoot.Repositories;
-using ExampleFeatureManagement.Models;
+using ExampleFeature.Cms.Models;
 using SimpleCqrs.Eventing;
 
-namespace ExampleFeatureManagement.Denormalizers
+namespace ExampleFeature.Cms.Denormalizers
 {
     public class ExampleFeaturesDenormalizer : InputModelDenormalizerBase<ExampleFeatureInputModel>,
                                                IHandleDomainEvents<InputModelSubmittedEvent>,

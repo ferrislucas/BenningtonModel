@@ -1,7 +1,7 @@
 ﻿using Bennington.Cms.InputModelAggregateRoot.Repositories;
-using ExampleFeatureManagement.Models;
+using ExampleFeature.Cms.Models;
 
-namespace ExampleFeatureManagement.Repositories
+namespace ExampleFeature.Cms.Repositories
 {
     public class ExampleFeaturesRepository : MongoRepository<ExampleFeatureInputModel>
     {
