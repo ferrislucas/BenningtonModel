@@ -277,7 +277,7 @@
     <Content Include="Target_\Active\ConnectionStrings.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ExampleFeatureManagement\ExampleFeature.Cms.csproj">
+    <ProjectReference Include="..\ExampleFeature.Cms\ExampleFeature.Cms.csproj">
       <Project>{89CD70A2-5E58-4E90-9B93-C15B45D8A2B5}</Project>
       <Name>ExampleFeature.Cms</Name>
     </ProjectReference>
