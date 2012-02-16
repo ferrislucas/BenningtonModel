@@ -16,11 +16,6 @@ namespace Shared
             connectionName = name;
         }
 
-        public static void SetDatabase(dynamic newDatabase)
-        {
-            database = newDatabase;
-        }
-
         public static dynamic GetMongoDatabase()
         {
             if (database == null)
