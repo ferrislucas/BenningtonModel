@@ -277,13 +277,9 @@
       <Project>{89CD70A2-5E58-4E90-9B93-C15B45D8A2B5}</Project>
       <Name>ExampleFeatureManagement</Name>
     </ProjectReference>
-    <ProjectReference Include="..\InputModelAggregateRoot\InputModelAggregateRoot.csproj">
+    <ProjectReference Include="..\InputModelAggregateRoot\Bennington.InputModelAggregateRoot.csproj">
       <Project>{882803D2-984F-4771-AB3A-9C6BDEB15CFB}</Project>
-      <Name>InputModelAggregateRoot</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Shared\Shared.csproj">
-      <Project>{FD24A522-089A-41F8-BBCC-11BB8EEA5246}</Project>
-      <Name>Shared</Name>
+      <Name>Bennington.InputModelAggregateRoot</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

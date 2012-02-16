@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Commands\DeleteInputModelCommand.cs" />
     <Compile Include="AggregateRoots\InputModelAggregateRoot.cs" />
+    <Compile Include="DatabaseFactory.cs" />
     <Compile Include="Denormalizers\InputModelDenormalizerBase.cs" />
     <Compile Include="Events\InputModelAggregateRootCreatedEvent.cs" />
     <Compile Include="Events\InputModelSubmittedEvent.cs" />
@@ -72,12 +73,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Shared\Shared.csproj">
-      <Project>{FD24A522-089A-41F8-BBCC-11BB8EEA5246}</Project>
-      <Name>Shared</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
