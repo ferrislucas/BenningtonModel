@@ -91,18 +91,17 @@
     <Compile Include="Routing\ExampleFeatureManagement.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\InputModelAggregateRoot\Bennington.InputModelAggregateRoot.csproj">
-      <Project>{882803D2-984F-4771-AB3A-9C6BDEB15CFB}</Project>
-      <Name>Bennington.InputModelAggregateRoot</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
     <EmbeddedResource Include="Views\ExampleFeatureManagement\CellTemplates\Name.cshtml" />
     <EmbeddedResource Include="Views\ExampleFeatureManagement\Index.cshtml" />
     <EmbeddedResource Include="Views\ExampleFeatureManagement\EditorTemplates\ExampleFeatureInputModel.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Bennington.Cms.InputModelAggregateRoot\Bennington.Cms.InputModelAggregateRoot.csproj">
+      <Project>{882803D2-984F-4771-AB3A-9C6BDEB15CFB}</Project>
+      <Name>Bennington.Cms.InputModelAggregateRoot</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

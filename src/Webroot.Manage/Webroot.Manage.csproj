@@ -273,13 +273,13 @@
     <Content Include="Target_\Active\ConnectionStrings.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Bennington.Cms.InputModelAggregateRoot\Bennington.Cms.InputModelAggregateRoot.csproj">
+      <Project>{882803D2-984F-4771-AB3A-9C6BDEB15CFB}</Project>
+      <Name>Bennington.Cms.InputModelAggregateRoot</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ExampleFeatureManagement\ExampleFeatureManagement.csproj">
       <Project>{89CD70A2-5E58-4E90-9B93-C15B45D8A2B5}</Project>
       <Name>ExampleFeatureManagement</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\InputModelAggregateRoot\Bennington.InputModelAggregateRoot.csproj">
-      <Project>{882803D2-984F-4771-AB3A-9C6BDEB15CFB}</Project>
-      <Name>Bennington.InputModelAggregateRoot</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

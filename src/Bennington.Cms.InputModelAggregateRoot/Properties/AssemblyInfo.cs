@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Shared")]
+[assembly: AssemblyTitle("Bennington.Cms.InputModelAggregateRoot")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Shared")]
+[assembly: AssemblyProduct("Bennington.Cms.InputModelAggregateRoot")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b5a7a50e-5b12-451d-9ad7-d1b1a6488c97")]
+[assembly: Guid("7bd53541-2941-4365-9bff-2a5af6da572d")]
 
 // Version information for an assembly consists of the following four values:
 //

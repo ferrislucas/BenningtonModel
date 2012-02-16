@@ -7,7 +7,6 @@ using Bennington.Core.Configuration;
 using MvcTurbine.ComponentModel;
 using MvcTurbine.Unity;
 using MvcTurbine.Web;
-using Shared;
 
 namespace SampleContentWebsite
 {
