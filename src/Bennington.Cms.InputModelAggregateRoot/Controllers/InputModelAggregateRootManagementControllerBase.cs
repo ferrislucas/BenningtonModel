@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using Bennington.Cms.Controllers;
-using InputModelAggregateRoot.Commands;
-using InputModelAggregateRoot.Repositories;
+using Bennington.Cms.InputModelAggregateRoot.Commands;
+using Bennington.Cms.InputModelAggregateRoot.Repositories;
 using Omu.ValueInjecter;
 using SimpleCqrs.Commanding;
 
-namespace InputModelAggregateRoot.Controllers
+namespace Bennington.Cms.InputModelAggregateRoot.Controllers
 {
     [ValidateInput(false)]
     public class InputModelAggregateRootManagementControllerBase<TListViewModel, TInputModel> : ListManageController<TListViewModel, TInputModel>

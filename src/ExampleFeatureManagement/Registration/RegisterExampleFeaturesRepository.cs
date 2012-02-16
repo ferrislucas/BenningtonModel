@@ -1,7 +1,7 @@
-﻿using ExampleFeatureManagement.Controllers;
+﻿using Bennington.Cms.InputModelAggregateRoot.Repositories;
+using ExampleFeatureManagement.Controllers;
 using ExampleFeatureManagement.Models;
 using ExampleFeatureManagement.Repositories;
-using InputModelAggregateRoot.Repositories;
 using MvcTurbine.ComponentModel;
 
 namespace ExampleFeatureManagement.Registration

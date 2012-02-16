@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Helpers;
-using Shared;
 using Simple.Data;
 
-namespace InputModelAggregateRoot.Repositories
+namespace Bennington.Cms.InputModelAggregateRoot.Repositories
 {
     public interface IRepository<T>
     {

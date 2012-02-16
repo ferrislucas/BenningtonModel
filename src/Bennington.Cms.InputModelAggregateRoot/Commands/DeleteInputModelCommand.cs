@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using SimpleCqrs.Commanding;
 
-namespace InputModelAggregateRoot.Commands
+namespace Bennington.Cms.InputModelAggregateRoot.Commands
 {
     public class DeleteInputModelCommand : CommandWithAggregateRootId
     {

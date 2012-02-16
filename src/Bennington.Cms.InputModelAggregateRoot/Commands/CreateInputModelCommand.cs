@@ -1,7 +1,7 @@
 ﻿using SimpleCqrs.Commanding;
 using SimpleCqrs.Domain;
 
-namespace InputModelAggregateRoot.Commands
+namespace Bennington.Cms.InputModelAggregateRoot.Commands
 {
     public class CreateInputModelCommand : CommandWithAggregateRootId
     {

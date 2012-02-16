@@ -1,8 +1,8 @@
 ﻿using System;
-using InputModelAggregateRoot.Events;
+using Bennington.Cms.InputModelAggregateRoot.Events;
 using SimpleCqrs.Domain;
 
-namespace InputModelAggregateRoot.AggregateRoots
+namespace Bennington.Cms.InputModelAggregateRoot.AggregateRoots
 {
     public class InputModelAggregateRoot : AggregateRoot
     {

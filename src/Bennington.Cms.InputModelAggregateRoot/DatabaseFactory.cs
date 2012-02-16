@@ -1,9 +1,8 @@
 ﻿using System.Configuration;
-using MongoDB.Driver;
 using Simple.Data;
 using Simple.Data.MongoDB;
 
-namespace Shared
+namespace Bennington.Cms.InputModelAggregateRoot
 {
     public static class DatabaseFactory
     {

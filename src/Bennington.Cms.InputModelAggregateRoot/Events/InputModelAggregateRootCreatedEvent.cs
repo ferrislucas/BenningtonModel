@@ -1,6 +1,6 @@
 ﻿using SimpleCqrs.Eventing;
 
-namespace InputModelAggregateRoot.Events
+namespace Bennington.Cms.InputModelAggregateRoot.Events
 {
     public class InputModelAggregateRootCreatedEvent : DomainEvent
     {

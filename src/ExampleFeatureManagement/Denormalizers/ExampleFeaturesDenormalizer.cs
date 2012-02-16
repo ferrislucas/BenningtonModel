@@ -1,7 +1,7 @@
-﻿using ExampleFeatureManagement.Models;
-using InputModelAggregateRoot.Denormalizers;
-using InputModelAggregateRoot.Events;
-using InputModelAggregateRoot.Repositories;
+﻿using Bennington.Cms.InputModelAggregateRoot.Denormalizers;
+using Bennington.Cms.InputModelAggregateRoot.Events;
+using Bennington.Cms.InputModelAggregateRoot.Repositories;
+using ExampleFeatureManagement.Models;
 using SimpleCqrs.Eventing;
 
 namespace ExampleFeatureManagement.Denormalizers

@@ -1,6 +1,6 @@
 ﻿using SimpleCqrs.Commanding;
 
-namespace InputModelAggregateRoot.Commands
+namespace Bennington.Cms.InputModelAggregateRoot.Commands
 {
     public class UpdateInputModelCommandHandler : AggregateRootCommandHandler<UpdateInputModelCommand, AggregateRoots.InputModelAggregateRoot>
     {

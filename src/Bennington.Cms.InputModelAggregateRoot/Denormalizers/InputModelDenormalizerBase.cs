@@ -1,7 +1,7 @@
-﻿using InputModelAggregateRoot.Events;
-using InputModelAggregateRoot.Repositories;
+﻿using Bennington.Cms.InputModelAggregateRoot.Events;
+using Bennington.Cms.InputModelAggregateRoot.Repositories;
 
-namespace InputModelAggregateRoot.Denormalizers
+namespace Bennington.Cms.InputModelAggregateRoot.Denormalizers
 {
     public class InputModelDenormalizerBase<T>
     {

@@ -1,5 +1,5 @@
-﻿using ExampleFeatureManagement.Models;
-using InputModelAggregateRoot.Repositories;
+﻿using Bennington.Cms.InputModelAggregateRoot.Repositories;
+using ExampleFeatureManagement.Models;
 
 namespace ExampleFeatureManagement.Repositories
 {
